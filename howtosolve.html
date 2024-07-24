@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>因数分解を使った方程式の解き方/How to solve equations using factorization</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async defer></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+    </head>
+    <body>
+        <img src="images/Title.png" alt="Swap Factor!" class="title-image">
+        日本語/Japanese
+        <h1>因数分解の使い方</h1>
+        <p>これだけ因数分解のことをやっておいて、何に使うのでしょうか。</p>
+        実は、数学を学ぶ上で、因数分解は欠かせないものなのです。なぜなら、以下のようなものに使えるからです。
+        <ul>
+            <li>整数問題を解く</li>
+            <li>方程式を解く</li>
+            <li>グラフの交点を求める</li>
+            <li>etc...</li>
+        </ul>
+        しかしこのゲームで重要なのは二番目の「方程式を解く」こと。<br>
+        え?方程式って移項するだけで解けたよね?と思った人、それは「<b>一次方程式</b>の時です。」
+        <h2>二次方程式の解き方</h2>
+        実は、一次方程式を解きかただけでは、<b>このゲームで必須となる</b>、二次方程式は解けません。<br>
+        こんな方程式を解いてみましょう。
+        <div class="code">
+            方程式\(x^2+3x-10=0\)の解は?
+        </div>
+        まずは単純に移項してみましょう。
+        \[
+            \begin{eqnarray}
+            x^2+3x-10=0 \\
+            \Leftrightarrow x^2-3x=10\\
+            \Leftrightarrow ...?
+            \end{eqnarray}
+        \]
+        え～と..。ここから先、どうすればいいの！？<br>
+        そこで、移項することを考えずに、<b>因数分解</b>してみましょう。<br>
+        この公式を思い出してください。
+        \[x^2+(a+b)+ab=(x+a)(x+b)\]
+        これを使って、\(x^2-3x+10\)を因数分解してみましょう。<br>
+        <div class="code">
+            足して3、掛けて-10になる二つの数は、-2と5なので、<br>
+            \[x^2+3x-10=(x-2)(x+5)\]
+            すなわち、
+            \[
+                \begin{eqnarray}
+                    x^2+3x+10=0
+                    \Leftrightarrow (x-2)(x+5)=0
+                \end{eqnarray}
+            \]
+        </div>
+        こうなりました。ここからどうするのでしょうか。<br>
+        実は、このようなことが分かります。<br>
+        <b>\(x-2\)または\(x+5\)のどちらかが0になれば、\((x-2)(x+5)\)も0になる。</b><br>
+        ここまでくれば皆さんお分かりでしょう。\(x-2\)か\(x+5\)がどちらかが0になればよいのです。<br>
+        そうすると、これらを解けばいいのです。
+        <ul>
+            <li>\(x-2=0\)</li>
+            <li>\(x+5=0\)</li>
+        </ul>
+        それぞれ解くと、\(x=2, x=-5\)となることがわかります。それぞれ本当に解になっているのかを確かめましょう。<br>
+        <ul>
+            <li>方程式\(x^2+3x-10=0\)のxに2を代入すると、\(2^2+3\times2-10=0\)となるので正しい。</li>
+            <li>方程式\(x^2+3x-10=0\)のxに-5を代入すると、\((-5)^2+3\times (-5)-10=0\)となるので正しい。</li>
+        </ul>
+        この解は正しいことが、明らかになりました！
+        <h2>二次方程式とはそもそも何か</h2>
+        二次方程式というのは、方程式の中に「二乗」が含まれている方程式のことです。<br>
+        先ほど出てきた\(x^2+3x-10=0\)の中にも、「\(x^2\)」が含まれているので、二次方程式です。<br>
+        <h2>発展: 二次方程式の性質</h2>
+        <p>実は、二次方程式には驚くべき性質があります。</p>
+        二次方程式には、<b>二つの解があるのです。</b>(ただし重解を含める)<br>
+        先ほど出てきた\(x^2+3x-10=0\)の中にも、解が2,-5と二つありました。<br>
+        なぜ二つ解が出てくるのかというのは、二次関数などを使って、理解することができますが、難しいので割愛します。<br>
+        また、二次方程式の解の中には、普段私たちが見ることのない、<b>虚数解</b>というものが含まれている可能性があります。<br>
+        虚数解というのは、二乗したら-1になる「虚数単位(\(i\)と表記されることが多い)」を含んだ解のことです。<br>
+        例えば、\(x^2+1=0\)の解は、\(\pm i\)です。<br>
+        ...これは高校数学で出てくるので、いまは理解する必要はありません。<br>こんなものもあるんだな、と思っていただけたらなと思います。
+        <h2>まとめ</h2>
+        二次方程式の解き方は以下のとおりである。
+        <ul>
+            <li>左辺=0の形にして、左辺を因数分解のする。</li>
+            <li>二つの因数どちらかが0になればよいので、因数=0を解く。</li>
+            <li>そうすると、解が求まる。</li>
+        </ul>
+        少し難しかったかもしれませんが、これで終わりです。やったね！<br>
+        <img src="images/Title.png" alt="Swap Factor!" class="title-image">
+        英語/English
+        <h1>How to Use Factorization</h1>
+        <p>Having discussed factorization so much, what is it actually used for?</p>
+        In fact, factorization is indispensable in learning mathematics because it can be used for the following purposes:
+        <ul>
+            <li>Solving integer problems</li>
+            <li>Solving equations</li>
+            <li>Finding the intersection points of graphs</li>
+            <li>etc...</li>
+        </ul>
+        However, the most important application in this game is the second one: "solving equations".<br>
+        Eh? You might think equations are just solved by transposing terms, right? That's only true for <b>linear equations</b>.
+        <h2>How to Solve Quadratic Equations</h2>
+        In fact, just solving linear equations is not enough for <b>this game's essential</b>, quadratic equations.<br>
+        Let's try solving this equation:
+        <div class="code">
+            What are the solutions to the equation \(x^2+3x-10=0\)?
+        </div>
+        First, let's simply transpose:
+        \[
+            \begin{eqnarray}
+            x^2+3x-10=0 \\
+            \Leftrightarrow x^2-3x=10\\
+            \Leftrightarrow ...?
+            \end{eqnarray}
+        \]
+        Uh... What do we do from here!?<br>
+        Instead of transposing, let's try <b>factorizing</b>.<br>
+        Remember this formula:
+        \[x^2+(a+b)x+ab=(x+a)(x+b)\]
+        Using this, let's factorize \(x^2-3x+10\).<br>
+        <div class="code">
+            The two numbers that add up to 3 and multiply to -10 are -2 and 5, so,<br>
+            \[x^2+3x-10=(x-2)(x+5)\]
+            Thus,
+            \[
+                \begin{eqnarray}
+                    x^2+3x+10=0
+                    \Leftrightarrow (x-2)(x+5)=0
+                \end{eqnarray}
+            \]
+        </div>
+        This is what we have now. What do we do next?<br>
+        In fact, it's clear that <b>either \(x-2\) or \(x+5\) must be zero for \((x-2)(x+5)\) to be zero</b>.<br>
+        As you might have guessed, either \(x-2\) or \(x+5\) needs to be zero.<br>
+        Solving these gives:
+        <ul>
+            <li>\(x-2=0\)</li>
+            <li>\(x+5=0\)</li>
+        </ul>
+        Solving each, we find \(x=2, x=-5\). Let's verify if these are indeed the solutions.<br>
+        <ul>
+            <li>Substituting x=2 into the equation \(x^2+3x-10=0\) gives \(2^2+3\times2-10=0\), which is correct.</li>
+            <li>Substituting x=-5 into the equation \(x^2+3x-10=0\) gives \((-5)^2+3\times (-5)-10=0\), which is also correct.</li>
+        </ul>
+        These solutions are indeed correct!
+        <h2>What Exactly is a Quadratic Equation?</h2>
+        A quadratic equation is an equation that includes a squared term, such as '\(x^2\)'.<br>
+        The equation \(x^2+3x-10=0\) we discussed also contains '\(x^2\)', making it a quadratic equation.<br>
+        <h2>Advanced: Properties of Quadratic Equations</h2>
+        <p>Interestingly, quadratic equations have some surprising properties.</p>
+        Quadratic equations typically have <b>two solutions</b> (including repeated solutions).<br>
+        As seen earlier, the solutions were 2 and -5.<br>
+        Why there are two solutions can be understood using quadratic functions, but it's complex, so we'll skip that.<br>
+        Also, the solutions of a quadratic equation might include <b>complex numbers</b>,<br> which are numbers that include the imaginary unit '\(i\)' (often denoted as \(i\)), 
+        <br>which when squared equals -1. For example, the solutions to \(x^2+1=0\) are \(\pm i\).<br>
+        ...This is a topic for high school mathematics, so you don't need to understand it now. Just know that such things exist.
+        <h2>Summary</h2>
+        The steps to solve a quadratic equation are as follows:
+        <ul>
+            <li>Form the equation so that one side equals zero, then factorize the left side.</li>
+            <li>Since either factor being zero will satisfy the equation, solve for when each factor equals zero.</li>
+            <li>Doing so will yield the solutions.</li>
+        </ul>
+        It might have been a bit challenging, but that's all for now. Well done!
+    </body>
+</html>
+

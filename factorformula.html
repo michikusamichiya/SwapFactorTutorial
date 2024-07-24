@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>因数分解の公式/How to solve equations using factorization</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async defer></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+    </head>
+    <body>
+        <img src="images/Title.png" alt="Swap Factor!" class="title-image">
+        日本語/Japanese
+        <h1>因数分解の公式</h1>
+        <p>因数分解の定義はもう一つのチュートリアル「<b>因数分解とは</b>」をみてください。</p>
+        さて、因数分解のチュートリアルで、こんなものが出てきましたよね。<br>
+        <ul>
+            <li>\(x^2+(a+b)x+ab=(x+a)(x+b)\)</li>
+            <li>\(x^2-(a+b)x+ab=(x-a)(x-b)\)</li>
+            <li>\(a^2+2ab+b^2=(a+b)^2\)</li>
+            <li>\(a^2-2ab+b^2=(a-b)^2\)</li>
+        </ul>
+        これは因数分解の公式なのですが、大雑把な説明しか<br>
+        していなかったので、説明をしていきます。<br>
+        <h2>因数分解の公式+</h2>
+        先ほどの因数分解の公式以外にも、色々な公式があります。これを含めると、
+        <ul>
+            <li>\(x^2+(a+b)x+ab=(x+a)(x+b)\)</li>
+            <li>\(x^2-(a+b)x+ab=(x-a)(x-b)\)</li>
+            <li>\(a^2+2ab+b^2=(a+b)^2\)</li>
+            <li>\(a^2-2ab+b^2=(a-b)^2\)</li>
+            <li><span style="color: rgb(255, 95, 95)">\(a^2-b^2=(a+b)(a-b)\)</span></li>
+        </ul>
+        こんな感じです。しかし、これが一体何なのか。そもそもこの公式にはどんな意味があるのか。<br>
+        解説していきます。
+        <h2>因数分解の公式の意味</h2>
+        そもそも、因数分解の公式に含まれるxやらaやらbやらは何なのか、ということになりますが、<br>
+        xはあまり気にせず、<b>aやbに数を入れる(代入)することが大事です。</b><br>
+        たとえば、これを見てみましょう。<br>
+        \[x^2+(a+b)x+ab=(x+a)(x+b)\]
+        このaとbに、それぞれ-2, 5を代入してみましょう。<br>
+        \[
+            \begin{eqnarray}
+            x^2+(a+b)x+ab=(x+a)(x+b) \\
+            \Leftrightarrow x^2+((-2) + (5))x+(-2)\times (5)=(x-2)(x+5) \\
+            \Leftrightarrow x^2+3x-10=(x-2)(x+5)
+            \end{eqnarray}
+        \]
+        公式のa,bに好きな数を入れることで、どのような式がどのような形になるのかということが<br>
+        分かります。他の公式にも、代入してみましょう。<br>
+        今度はこの公式です。
+        \[a^2-b^2=(a+b)(a-b)\]
+        この公式に、\(a=x, b=9\)を入れてみましょう。<br>
+        \[
+            \begin{eqnarray}
+            a^2-b^2=(a+b)(a-b)\\
+            \Leftrightarrow x^2-9^2=(x+9)(x-9)\\
+            \Leftrightarrow x^2-81=(x+9)(x-9)
+            \end{eqnarray}
+        \]
+        はい、これで求まりました！\(x^2-81\)は\((x+9)(x-9)\)になることが分かりました。<br>
+        このようにして、aやbに色々な値を代入して、<b>どのような式がどのような形になるのか</b>を<br>
+        確かめることができるのが、因数分解の公式です。
+        <h2>発展「因数分解」の「逆」</h2>
+        <p>実は、因数分解には、<b>逆の操作</b>が存在します。</p>
+        因数分解は、<b>1つの足し算や引き算が混ざっている式をカッコにまとめる</b>事でしたが、<br>
+        その「逆の操作」は、<b>カッコにまとめられた式を足し算や引き算が混ざった式に直す</b>ことです。これを、<br>
+        <b>展開</b>といいます。<br>
+        因数分解では目的の式になるようなa,bを探して行ったのですが、展開では機械的に掛け算と足し算をすることによって、簡単にできます。<br>
+        こんな感じです。<br>
+        \[
+            \begin{eqnarray}
+            (a+b)(a-b)=a(a-b)+b(a-b) \\
+            =a^2-ab+ab-b^2 \\
+            =a^2-b^2
+            \end{eqnarray}
+        \]
+        <h2>まとめ</h2>
+        <ul>
+            <li>因数分解の公式のaやbなどの文字に好きな数を入れることによって、<br>
+                この式がこうなる、という方程式がわかる。</li>
+            <li>因数分解の逆の操作は展開である。</li>
+        </ul>
+        今回は簡単でしたね。これで終わりです。やったね！<br>
+        <img src="images/Title.png" alt="Swap Factor!" class="title-image">
+        英語/English
+        <h1>Formulas for Factorization</h1>
+        <p>For the definition of factorization, please see another tutorial "<b>What is Factorization?</b>"</p>
+        Now, in the factorization tutorial, you've seen something like this, right?<br>
+        <ul>
+            <li>\(x^2+(a+b)x+ab=(x+a)(x+b)\)</li>
+            <li>\(x^2-(a+b)x+ab=(x-a)(x-b)\)</li>
+            <li>\(a^2+2ab+b^2=(a+b)^2\)</li>
+            <li>\(a^2-2ab+b^2=(a-b)^2\)</li>
+        </ul>
+        These are formulas for factorization, but they were only briefly explained before.<br>
+        Let's go into more detail now.<br>
+        <h2>Additional Factorization Formulas</h2>
+        Besides the factorization formulas mentioned earlier, there are various others. Including these, we have:
+        <ul>
+            <li>\(x^2+(a+b)x+ab=(x+a)(x+b)\)</li>
+            <li>\(x^2-(a+b)x+ab=(x-a)(x-b)\)</li>
+            <li>\(a^2+2ab+b^2=(a+b)^2\)</li>
+            <li>\(a^2-2ab+b^2=(a-b)^2\)</li>
+            <li><span style="color: rgb(255, 95, 95)">\(a^2-b^2=(a+b)(a-b)\)</span></li>
+        </ul>
+        This is how it looks. However, what exactly are these formulas? What do they mean?<br>
+        Let's explain.
+        <h2>The Meaning of Factorization Formulas</h2>
+        First off, what are x, a, and b in these factorization formulas?<br>
+        Don't worry too much about x, but it's important to <b>substitute numbers for a and b</b>.<br>
+        For example, let's look at this:<br>
+        \[x^2+(a+b)x+ab=(x+a)(x+b)\]
+        Let's substitute -2 for a and 5 for b:<br>
+        \[
+            \begin{eqnarray}
+            x^2+(a+b)x+ab=(x+a)(x+b) \\
+            \Leftrightarrow x^2+((-2) + (5))x+(-2)\times (5)=(x-2)(x+5) \\
+            \Leftrightarrow x^2+3x-10=(x-2)(x+5)
+            \end{eqnarray}
+        \]
+        By substituting different numbers for a and b, you can see how the expression transforms.<br>
+        Let's try another formula.
+        \[a^2-b^2=(a+b)(a-b)\]
+        Substitute \(a=x, b=9\) and see what happens:<br>
+        \[
+            \begin{eqnarray}
+            a^2-b^2=(a+b)(a-b)\\
+            \Leftrightarrow x^2-9^2=(x+9)(x-9)\\
+            \Leftrightarrow x^2-81=(x+9)(x-9)
+            \end{eqnarray}
+        \]
+        There you have it! \(x^2-81\) turns out to be \((x+9)(x-9)\).<br>
+        By substituting various values for a and b, you can verify <b>how different expressions take different forms</b>.
+        <h2>The Reverse of Factorization</h2>
+        <p>Actually, there is a reverse operation to factorization.</p>
+        Factorization is about <b>grouping a formula with addition or subtraction into brackets</b>, but<br>
+        the reverse operation is about <b>turning a formula grouped in brackets back into one with mixed addition and subtraction</b>. This is called <b>expansion</b>.<br>
+        In factorization, we look for a and b that make the formula work, but in expansion, we simply perform multiplication and addition mechanically.<br>
+        It goes like this:<br>
+        \[
+            \begin{eqnarray}
+            (a+b)(a-b)=a(a-b)+b(a-b) \\
+            =a^2-ab+ab-b^2 \\
+            =a            ^2-ab+ab-b^2 \\
+            =a^2-b^2
+            \end{eqnarray}
+        \]
+        <h2>Summary</h2>
+        <ul>
+            <li>By substituting any numbers for a and b in the factorization formulas, you can understand how the equation transforms.</li>
+            <li>The reverse operation of factorization is expansion.</li>
+        </ul>
+        That was simple, wasn't it? That's all for now. Well done!
+    </body>
+</html>
+

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>もっと難しい因数分解の公式/More difficult factorization formulas</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async defer></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+    </head>
+    <body>
+        <img src="images/Title.png" alt="Swap Factor!" class="title-image">
+        日本語/Japanese
+        <p>※これは発展的な内容を取り扱っています。理解しなくても構いません。</p>
+        <h1>因数分解の式はこれだけじゃない</h1>
+        <p>因数分解の公式は、ほかにもあるんです。</p>
+        皆さんがレッスンで知った因数分解の公式はこれです。
+        <ul>
+            <li>\(x^2+(a+b)x+ab=(x+a)(x+b)\)</li>
+            <li>\(x^2-(a+b)x+ab=(x-a)(x-b)\)</li>
+            <li>\(a^2+2ab+b^2=(a+b)^2\)</li>
+            <li>\(a^2-2ab+b^2=(a-b)^2\)</li>
+            <li>\(a^2-b^2=(a+b)(a-b)\)</li>
+        </ul>
+        何度も言いますが、公式はこれだけではありません。<br>
+        この式には全て「<b>二乗</b>」が含まれていますよね。<br>
+        では、三乗の公式はあるのでしょうか?四乗は?他のものは?
+        <h2>三乗の公式</h2>
+        <ul>
+            <li>\(a^3+b^3=(a+b)(a^2-ab+b^2)\)</li>
+            <li>\(a^3-b^3=(a-b)(a^2+ab+b^2)\)</li>
+            <li>\(a^3+3a^2b+3ab^2+b^3=(a+b)^3\)</li>
+            <li>\(a^3-3a^2b+3ab^2-b^3=(a-b)^3\)</li>
+            <li>\(x^3+(a+b+c)x^2+(ab+ac+bc)x+abc=(x+a)(x+b)(x+c)\)</li>
+            <li>\(a^3+b^3+c^3-3abc=(a+b+c)(a^2+b^2+c^2-ab-ac-bc)\)</li>
+        </ul>
+        二乗の式に比べたら非常に難しい公式になっていますね。<br>
+        よく使うもの、と言ったら一番目と二番目の公式です。<br>
+        「<b>三乗の差</b>と<b>三乗の和</b>」を因数分解できます。<br>
+        ではこれを使って、方程式を解いてみましょう。<br>
+        <div class="code">
+            方程式\(x^3+27=0\)の解は?
+        </div>
+        さあ、左辺が一番目の式を使って因数分解出来そうですね。<br>
+        \(a=x, b=3\)として、因数分解します。
+        \[
+            \begin{eqnarray}
+                x^3+27=0\\
+                \Leftrightarrow (x+3)(x^2-3x+9)=0
+            \end{eqnarray}
+        \]
+        これで一つ目の答えが分かりました。\(x+3=0\)なので\(x=-3\)が確定です。<br>
+        さて、次は\(x^2-3x+9=0\)を計算しなければなりませんが、<br>これは因数分解できませんので、解の公式を使います。
+        <div class="code">
+            方程式\(ax^2+bx+c=0~(a\neq 0)\)において、<br>
+            \[x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}\]
+            である。
+        </div>
+        \(a=1, b=-3, c=9\)とおいて、計算します。<br>
+        \[
+            \begin{eqnarray}
+                \dfrac{-(-3)\pm\sqrt{(-3)^2-4\cdot1\cdot9}}{2\cdot 1}
+                =\dfrac{3\pm\sqrt{9-36}}{2}\\
+                =\dfrac{3\pm\sqrt{-27}}{2}\\
+                =\dfrac{3\pm3\sqrt{3}i}{2}\\
+                =\dfrac{3(\pm\sqrt{3}i+1)}{2}\\
+            \end{eqnarray}
+        \]
+        はい、これで求まりました！解は
+        \[x=-3, \dfrac{3(\pm\sqrt{3}i+1)}{2}\]
+        です。
+        <h2>四乗の公式</h2>
+        ちょっとややこしい式になりますが、みてください。
+        <ul>
+            <li>(a+b)^4=a^4+4a^3b+6a^2b^2+4ab^3+b^4</li>
+            <li>(a-b)^4=a^4-4a^3b+6a^2b^2-4ab^3+b^4</li>
+        </ul>
+        うーん難しいですね。
+        <h2>n乗の公式</h2>
+        実は、n乗の公式はこの式から抽出することができます。
+        \[(a+b)^n=\sum_{k=0}^{n}{}_nC_ka^kb^{n-k}\]
+        意味が分からない記号がありますが、今のところ覚える必要はありません。<br>
+        大学受験生になった時に、使うことになるかもしれません。<br>
+        ちなみにこれは<b>二項定理</b>といいます。
+        <h2>二乗の因数分解 +α</h2>
+        じつは、私たちがふつうにみている数だけでは因数できない式があります。それは<br>
+        \[a^2+b^2\]
+        これです。「<b>二乗の和</b>は因数分解できないのです。」<br>
+        しかし、じつはこの式を「無理矢理」因数分解する方法があります。<br>
+        このレッスンでも少し出てきましたね。そう、<br>
+        <b>虚数単位</b>です。二乗したら-1になる数。<br>
+        じつは、これを使えば、このように因数分解できます。
+        \[a^2+b^2=(a+bi)(a-bi)\]
+        この虚数単位を使った因数分解を使うことはあまりありませんが、虚数単位は高校でよく使うので、<br>
+        覚えておいて損はありません。
+        <h2>まとめ</h2>
+        <ul>
+            <li>因数分解の公式は、二乗のものだけでなく、三乗、四乗でも存在する。</li>
+            <li>二項定理を使うことによって、n乗の式をつくることができる。</li>
+            <li>虚数単位を使った因数分解も、実数範囲でできない因数分解も可能になることがある。</li>
+        </ul>
+        これで終わりです。やったね！<br>
+        <img src="images/Title.png" alt="Swap Factor!" class="title-image">
+        英語/English
+        <p>※This content is advanced and it's okay if you don't understand it.</p>
+        <h1>Factorization is not just this</h1>
+        <p>There are more factorization formulas than you might know.</p>
+        Here are the factorization formulas you learned in the lesson:
+        <ul>
+            <li>\(x^2+(a+b)x+ab=(x+a)(x+b)\)</li>
+            <li>\(x^2-(a+b)x+ab=(x-a)(x-b)\)</li>
+            <li>\(a^2+2ab+b^2=(a+b)^2\)</li>
+            <li>\(a^2-2ab+b^2=(a-b)^2\)</li>
+            <li>\(a^2-b^2=(a+b)(a-b)\)</li>
+        </ul>
+        I repeat, these are not the only formulas. <br>
+        All these formulas involve "squares".<br>
+        So, are there formulas for cubes? What about fourth powers? Or others?
+        <h2>Cubic Formulas</h2>
+        <ul>
+            <li>\(a^3+b^3=(a+b)(a^2-ab+b^2)\)</li>
+            <li>\(a^3-b^3=(a-b)(a^2+ab+b^2)\)</li>
+            <li>\(a^3+3a^2b+3ab^2+b^3=(a+b)^3\)</li>
+            <li>\(a^3-3a^2b+3ab^2-b^3=(a-b)^3\)</li>
+            <li>\(x^3+(a+b+c)x^2+(ab+ac+bc)x+abc=(x+a)(x+b)(x+c)\)</li>
+            <li>\(a^3+b^3+c^3-3abc=(a+b+c)(a^2+b^2+c^2-ab-ac-bc)\)</li>
+        </ul>
+        These formulas are significantly more complex than the quadratic ones.<br>
+        The most commonly used are the first and second formulas.<br>
+        They allow you to factorize "the sum and difference of cubes".<br>
+        Let's use these to solve an equation.<br>
+        <div class="code">
+            What is the solution to the equation \(x^3+27=0\)?
+        </div>
+        It looks like we can factorize the left-hand side using the first formula.<br>
+        Let \(a=x, b=3\) and factorize it.
+        \[
+            \begin{eqnarray}
+                x^3+27=0\\
+                \Leftrightarrow (x+3)(x^2-3x+9)=0
+            \end{eqnarray}
+        \]
+        Now we have one solution. Since \(x+3=0\), \(x=-3\) is confirmed.<br>
+        Next, we need to calculate \(x^2-3x+9=0\),<br>which cannot be factorized, so we use the quadratic formula.
+        <div class="code">
+            For the equation \(ax^2+bx+c=0~(a\neq 0)\),<br>
+            \[x=\dfrac{-b\pm\sqrt{b^2-4ac}}{2a}\]
+            is used.
+        </div>
+        Let \(a=1, b=-3, c=9\) and calculate.<br>
+        \[
+            \begin{eqnarray}
+                \dfrac{-(-3)\pm\sqrt{(-3)^2-4\cdot1\cdot9}}{2\cdot 1}
+                =\dfrac{3\pm\sqrt{9-36}}{2}\\
+                =\dfrac{3\pm\sqrt{-27}}{2}\\
+                =\dfrac{3\pm3\sqrt{3}i}{2}\\
+                =\dfrac{3(\pm\sqrt{3}i+1)}{2}\\
+            \end{eqnarray}
+        \]
+        There, we have the solutions!
+        \[x=-3, \dfrac{3(\pm\sqrt{3}i+1)}{2}\]
+        <h2>Quartic Formulas</h2>
+        These formulas get a bit complicated, but take a look:
+        <ul>
+            <li>(a+b)^4=a^4+4a^3b+6a^2b^2+4ab^3+b^4</li>
+            <li>(a-b)^4=a^4-4a^3b+6a^2b^2-4ab^3+b^4</li>
+          </ul>
+          Yes, these are complex.
+          <h2>Formulas for Powers of n</h2>
+          Actually, you can derive the formulas for any power n from this expression:
+          \[(a+b)^n=\sum_{k=0}^{n}{}_nC_ka^kb^{n-k}\]
+          There are some symbols here that might be unfamiliar, but you don't need to memorize them right now.<br>
+          You might use them when you become a university student.<br>
+          By the way, this is called the <b>Binomial Theorem</b>.
+          <h2>Squaring Factorization +α</h2>
+          Actually, there are expressions that we normally can't factorize using just real numbers. That is:
+          \[a^2+b^2\]
+          This is the "sum of squares," which cannot be factorized.<br>
+          However, there is a way to "force" a factorization of this expression.<br>
+          We touched on this a bit in this lesson. Yes,
+          <b>imaginary unit</b>, a number which when squared equals -1.<br>
+          Indeed, using this, you can factorize it as follows:
+          \[a^2+b^2=(a+bi)(a-bi)\]
+          Using this imaginary unit for factorization is not very common, but since imaginary units are often used in high school, 
+          it's not a loss to remember them.
+          <h2>Summary</h2>
+          <ul>
+              <li>Factorization formulas exist not only for squares but also for cubes, fourth powers, and beyond.</li>
+              <li>By using the Binomial Theorem, you can create expressions for powers of n.</li>
+              <li>Factorization using the imaginary unit makes it possible to factorize expressions that cannot be factorized within the realm of real numbers.</li>
+          </ul>
+          That's it. Well done!
+    </body>
+</html>
+

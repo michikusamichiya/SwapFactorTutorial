@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>二次方程式の解の公式/Formulas for the solution of quadratic equations</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async defer></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+    </head>
+    <body>
+        
+        <img src="images/Title.png" alt="Swap Factor!" class="title-image">
+        日本語/Japanese
+        <h1>発展: 二次方程式の解の公式</h1>
+        <p>※これは発展的な内容を取り扱っています。理解しなくても構いません。</p>
+        二次方程式の解き方として、因数分解がありますが、実はそれ以外にも方法があります。<br>
+        それが<b>解の公式</b>です。<br>
+        単刀直入にいうと、これのことです。
+        <div class="code">
+            二次方程式\(ax^2+bx+c=0~(a\neq 0)\)に対して、以下が成り立つ。
+            \[
+                x=\dfrac{-b+\sqrt{b^2-4ac}}{2a},x=\dfrac{-b-\sqrt{b^2-4ac}}{2a}
+            \]
+        </div>
+        これはどういうことかというと、a,b,cに好きな数を当てはめたら、自然とxの答えがわかってしまうという<br>
+        恐ろしいものです。例えば、このような問題を解いてみましょう。<br>
+        <div class="code">
+            \[x^2+3x-10=0\]をxについて解きましょう。
+        </div>
+        因数分解が使えますが、ここはあえて解の公式を使ってみましょう。<br>
+        \(a=1,b=3,c=-10\)としたら、解はこれになります。<br>
+        \[(i)~x=\dfrac{-3+\sqrt{3^2-4\times 1\times (-10)}}{2\times 1}, (ii)~x=\dfrac{-3-\sqrt{3^2-4\times 1\times (-10)}}{2\times 1}\]
+        このままだと式が汚いので、整理しましょう。
+        <ul>
+            <li>
+                (i)について
+                \[
+                    \begin{eqnarray}
+                    x=\dfrac{-3+\sqrt{3^2-4\times 1\times (-10)}}{2\times 1} \\
+                    =\dfrac{-3+\sqrt{9-(-40))}}{2}\\
+                    =\dfrac{-3+\sqrt{49}}{2}\\
+                    =\dfrac{-3+7}{2}\\
+                    =\dfrac{4}{2}\\
+                    =2
+                    \end{eqnarray}
+                \]
+            </li>
+            <li>
+                (ii)について
+                \[
+                    \begin{eqnarray}
+                        x=\dfrac{-3-\sqrt{3^2-4\times 1\times (-10)}}{2\times 1} \\
+                        =\dfrac{-3-\sqrt{9-(-40)}}{2}\\
+                        =\dfrac{-3-\sqrt{49}}{2}\\
+                        =\dfrac{-3-7}{2}\\
+                        =\dfrac{-10}{2}\\
+                        =-5
+                    \end{eqnarray}
+                \]
+            </li>
+        </ul>
+        因数分解したら、\(x^2+3x-10=(x-2)(x+5)=0\)となるので、解の公式で出した答えも正しいです。
+        <h2>解の公式の使いどころ</h2>
+        解の公式があるとはいえ、<b>基本的には因数分解を使った方がよいです。</b><br>
+        解の公式から解を計算する途中式をみたら分かりますが、非常に面倒で計算量も多いです。<br>
+        しかしどうしても解の公式を使う必要があるときがあります。<br>
+        それは<b>因数分解ができない時</b>です。例えば、\[x^2+x+1=0\]<br>
+        この答えは、\(\dfrac{-1\pm\sqrt3i}{2}\)なのですが、因数分解が使えません。<br>
+        その時は、解の公式を使うのがよいでしょう。<br>
+        <h2>まとめ</h2>
+        <ul>
+            <li>二次方程式を解くときは、因数分解のほかに、解の公式を使うことができる。</li>
+            <li>解の公式を使うと、因数分解ができない方程式でも解を求めることができる。</li>
+            <li>基本的には因数分解を使った方がよい。</li>
+        </ul>
+        これで終わりです。やったね！<br>
+
+        <img src="images/Title.png" alt="Swap Factor!" class="title-image">
+        英語/English
+        <h1>Advanced: Formulas for Solving Quadratic Equations</h1>
+        <p>※This content is advanced and it's okay if you don't understand it.</p>
+        While factorization is one method to solve quadratic equations, there are other methods as well.<br>
+        One such method is the <b>quadratic formula</b>.<br>
+        Simply put, it refers to this:
+        <div class="code">
+            For the quadratic equation \(ax^2+bx+c=0~(a\neq 0)\), the following holds true:
+            \[
+                x=\dfrac{-b+\sqrt{b^2-4ac}}{2a}, x=\dfrac{-b-\sqrt{b^2-4ac}}{2a}
+            \]
+        </div>
+        What this means is that by substituting any numbers for a, b, and c, you can directly find the solutions for x.<br>
+        For example, let's solve this problem:<br>
+        <div class="code">
+            Solve for x in \[x^2+3x-10=0\].
+        </div>
+        Although factorization is possible, let's deliberately use the quadratic formula here.<br>
+        Setting \(a=1, b=3, c=-10\), the solutions are as follows:<br>
+        \[(i)~x=\dfrac{-3+\sqrt{3^2-4\times 1\times (-10)}}{2\times 1}, (ii)~x=\dfrac{-3-\sqrt{3^2-4\times 1\times (-10)}}{2\times 1}\]
+        Let's tidy up these expressions:
+        <ul>
+            <li>
+                For (i)
+                \[
+                    \begin{eqnarray}
+                    x=\dfrac{-3+\sqrt{3^2-4\times 1\times (-10)}}{2\times 1} \\
+                    =\dfrac{-3+\sqrt{9+40}}{2} \\
+                    =\dfrac{-3+\sqrt{49}}{2} \\
+                    =\dfrac{-3+7}{2} \\
+                    =\dfrac{4}{2} \\
+                    =2
+                    \end{eqnarray}
+                \]
+            </li>
+            <li>
+                For (ii)
+                \[
+                    \begin{eqnarray}
+                        x=\dfrac{-3-\sqrt{3^2-4\times 1\times (-10)}}{2\times 1} \\
+                        =\dfrac{-3-\sqrt{9+40}}{2} \\
+                        =\dfrac{-3-\sqrt{49}}{2} \\
+                        =\dfrac{-3-7}{2} \\
+                        =\dfrac{-10}{2} \\
+                        =-5
+                    \end{eqnarray}
+                \]
+            </li>
+        </ul>
+        If factorized, \(x^2+3x-10=(x-2)(x+5)=0\), thus the solutions derived from the quadratic formula are correct.
+        <h2>When to Use the Quadratic Formula</h2>
+        Although the quadratic formula is available, <b>it is generally better to use factorization</b>.<br>
+        As you can see from the intermediate steps of the quadratic formula, it can be quite cumbersome and involves a lot of calculation.<br>
+        However, there are times when the quadratic formula is necessary.<br>
+        That is when <b>factorization is not possible</b>. For example, \[x^2+x+1=0\]<br>
+        The solutions are \(\dfrac{-1\pm\sqrt{3}i}{2}\), but factorization is not feasible.<br>
+        In such cases, it is advisable to use the quadratic formula.<br>
+        <h2>Summary</h2>
+        <ul>
+            <li>Aside from factorization, the quadratic formula can be used to solve quadratic equations.</li>
+            <li>The quadratic formula allows you to find solutions even for equations that cannot be factorized.</li>
+            <li>Generally, it is better to use factorization.</li>
+        </ul>
+        That's all for now. Well done!<br>
+    </body>
+</html>
+

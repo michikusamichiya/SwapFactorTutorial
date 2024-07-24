@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>文字式のルールについて/About Character Expression</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async defer></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+    </head>
+    <body>
+        <img src="images/Title.png" alt="Swap Factor!" class="title-image">
+        日本語/Japanese
+        <h1>文字式とは</h1>
+        <p>文字式とは、数字と文字を組み合わせてあらわされる式のことです。</p>
+        ...とは言われても、「文字ってなんだ」という話です。<br>
+        例えば、こんな問題を解いてみましょう。<br>
+        小学生の時にもこんな問題を解きませんでしたか?<br>
+        <div class="code">
+            Aさんはみかんを10個持っています。Bさんはりんごを\(\square\)個<br>
+            持っています。みかんとりんごの個数の合計はいくつですか?
+        </div>
+        この四角には、どんな数も入りますよね?<br>
+        1個、2個、10個、100個、もしくは0個。どんな数を入れることもできます。<br>
+        (※正確に言うと\(\square\in\mathbb{N}\), 四角に入るべき数は自然数である必要がある)<br>
+        このように、「<b>分からない数</b>」を、四角のような文字としておく事があります。<br>
+        あ、ちなみに答えは\(10+\square\)です。<br><br>
+        <b>...というのは小学生までの話。</b>
+        <h2>中学生からの「文字式」とは</h2>
+        <p>今までは四角や三角などの文字を使ってきましたが、<br>中学生になったら、何を使うでしょう?</p>
+        <p>答えは「<b>アルファベット</b>」。</p>
+        ただ、アルファベットを使うときにはちょっとした決まりがあります。<br>
+        この問題の例を基に考えてみましょう。
+        <div class="code">
+            Aさんはみかんを\(a\)個、持っています。また、BさんはAさんの3倍の個数のりんごと\(b\)個のみかんを持っています。<br>
+            Aさんのみかんと、Bさんのみかんとりんごの合計はいくつですか?
+        </div>
+        まず、この問題を解くために、Bさんがりんごを何個、みかんを何個持っているかを考えましょう。
+        <ul>
+            <li>まず、Aさんはりんごを\(a\)個持っている。</li>
+            <li>Bさんは「<b>Aさんのりんごの3倍の個数</b>」のりんごを持っている。</li>
+            <li>また、Bさんは\(b\)個のミカンを持っている。</li>
+        </ul>
+        これらを踏まえると、答えは<br>
+        \[a+3\times a + b\]
+        個ということになります。<br>
+        実はこのままだと正解ではありません。。<br>
+        <h2>文字式のルール</h2>
+        では、その「ルール」とは何でしょうか。これです。
+        <ul>
+            <li>
+                <b>掛け算の記号\(\times\)は省略します。</b><br>
+                掛け算の記号が残っていると計算途中とみなされるので、減点されます。
+            </li>
+            <li>
+               <b> 数字と文字の文字の関野並びは数字が先。</b><br>
+                \(a\times 4\times b=4ab\)のように、項ごとに数字を一番前に持ってくるようにしましょう。<br>
+                \(a4b\)のように、数字を記号の間や途中においてはいけません。
+            </li>
+            <li>
+                <b>文字同士の積の並びはアルファベット順。</b><br>
+                これはあまり重要ではありませんが、<br>\(x\times a\times z\times b\)のような掛け算は<br>
+                アルファベット順に並べましょう。答えは\(abxz\)となります。<br>
+                \(xazb\)としてもあまり影響はありませんが...。
+            </li>
+            <li>
+                <b>同じ文字の積(掛け算)は指数で表す。</b>
+                例えば、\(a\times a\times b\times c\times c\times c=a^2bc^3\)。<br>
+                \(a\times a=aa\)とするのではなく、文字の右上に同じ文字が何文字あるかというのを<br>
+                書きます。ただし数字の場合は指数を回答に載せないようにしましょう。(あまり大きな数でない限り...)
+            </li>
+            <li>
+                <b>割り算は分数を使う。</b>
+                たとえば、\(2\times a\div b \times c=\dfrac{2ac}{b}\)のように、割り算の記号を使わないようにしましょう。<br>
+                分数を使いましょう。
+            </li>
+            <li>
+                <b>同類項はまとめる。</b><br>
+                同じ文字が同じだけ含まれる(たとえば、\(2ab+3ab\)、\(3a^3b^2c-4a^3b^2c\))項を、まとめておきましょう。<br>
+                たとえば、\(2ab+3ab=5ab\)、\(-a^3b^2c\)
+            </li>
+            <li>小学校のころ使っていた帯分数は使わないようにしましょう。基本は仮分数で。</li>
+            <li>(定数をあらわす文字は数字の次、未知数は文字の前におきましょう。このゲームでは出てきませんが、<br>円周率などの定数\(\pi\)は数字の後に書きましょう。)</li>
+        </ul>
+        これらの法則に従って、
+        \[a+3\times a + b\]
+        をちゃんとした式に直しましょう。<br>
+        まず、掛け算の記号を消すと、こうなります。<br>
+        \[a+3a+b\]<br>
+        同類項をまとめると、こうなります。<br>
+        \[4a+b\]
+        これ以上まとめることができないので、答えは<br>
+        \[4a+b(個)\]となります。
+        また、このゲームでよく出てくる二次方程式も、文字式で表しましょう。<br>
+        \[x\times x-3\times x+10\]
+        まずは同じ積を指数にまとめましょう。
+        \[x^2-3\times x+10\]
+        つぎに、掛け算の記号を消して、数を前に持ってきましょう。<br>
+        \[x^2-3x+10\]
+        これで、文字式を整理できました！掛け算の記号を何回も書くよりも、簡潔になりましたね。
+        <h2>まとめ</h2>
+        <ul>
+            <li>文字式とは、文字と数字を組み合わせて作られるものである。</li>
+            <li>文字式を書く時には、「ルール」を守る必要がある。</li>
+            <li>文字式を使うことによって、分からない数を式に含めることができる。</li>
+        </ul>
+        これで終わりです。やったね！<br>
+        <img src="images/Title.png" alt="Swap Factor!" class="title-image">
+        英語/English
+        <h1>What is an Algebraic Expression?</h1>
+        <p>An algebraic expression is a formula that combines numbers and letters.</p>
+        ...Even if it's said, "What are these letters?" Let's consider this example.<br>
+        Did you not solve such problems when you were in elementary school?<br>
+        <div class="code">
+            Person A has 10 oranges. Person B has \(\square\) apples.<br>
+            What is the total number of oranges and apples?
+        </div>
+        Any number can fit into this square, right?<br>
+        1, 2, 10, 100, or even 0. Any number can be placed.<br>
+        (※ To be precise, \(\square\in\mathbb{N}\), the number in the square must be a natural number)<br>
+        In this way, "unknown numbers" are sometimes represented as symbols like squares.<br>
+        Oh, by the way, the answer is \(10+\square\).<br><br>
+        <b>...but that's a story up to elementary school.</b>
+        <h2>Algebraic Expressions from Middle School Onwards</h2>
+        <p>Until now, we have used symbols like squares and triangles, but what will we use once we reach middle school?</p>
+        <p>The answer is '<b>Alphabet letters</b>'.</p><br>
+        However, there are some rules when using alphabet letters.<br>
+        Let's consider an example based on this problem.
+        <div class="code">
+            Person A has \(a\) oranges. Additionally, Person B has three times the number of apples as Person A and \(b\) oranges.<br>
+            What is the total number of oranges and apples that Person A and Person B have?
+        </div>
+        First, let's think about how many apples and oranges Person B has.
+        <ul>
+            <li>First, Person A has \(a\) apples.</li>
+            <li>Person B has 'three times the number of apples that Person A has'.</li>
+            <li>Additionally, Person B has \(b\) oranges.</li>
+        </ul>
+        Considering these, the answer is<br>
+        \[a+3\times a + b\]
+        However, this is not the correct answer yet..<br>
+        <h2>Rules of Algebraic Expressions</h2>
+        So, what are these 'rules'? Here they are.
+        <ul>
+            <li>
+                <b>Omit the multiplication symbol '\(\times\)'</b><br>
+                If the multiplication symbol remains, it is considered as being in the middle of calculation, which can lead to deductions.
+            </li>
+            <li>
+               <b>Numbers come before letters in terms.</b><br>
+                For example, \(a\times 4\times b=4ab\). Arrange the numbers at the beginning of each term.<br>
+                Do not place numbers in between or in the middle of letters like \(a4b\).
+            </li>
+            <li>
+                <b>Arrange the product of letters in alphabetical order.</b><br>
+                This is not very important, but<br>\(x\times a\times z\times b\) should be arranged as \(abxz\).<br>
+                Writing it as \(xazb\) does not have much effect, though.
+            </li>
+            <li>
+                <b>Express the product of the same letters using exponents.</b>
+                For example, \(a\times a\times b\times c\times c\times c=a^2bc^3\).<br>
+                Instead of \(a\times a=aa\), write the number of times the same letter appears as an exponent on the right top of the letter.<br> However, do not use exponents for numbers unless they are significantly large.
+            </li>
+            <li>
+                <b>Use fractions for division.</b>
+                For example, \(2\times a\div b \times c=\dfrac{2ac}{b}\). Avoid using the division symbol and use fractions instead.
+            </li>
+            <li>
+                <b>Combine like terms.</b><br>
+                Combine terms that contain the same letters in the same amount (e.g., \(2ab+3ab\), \(3a^3b^2c-4a^3b^2c\)).<br>
+                For example, \(2ab+3ab=5ab\), \(-a^3b^2c\).
+            </li>
+            <li>Avoid using mixed fractions from elementary school; stick to improper fractions.</li>
+            <li>(While this game does not cover it, place constants like the number \(\pi\) after numbers but before variables in expressions.)</li>
+        </ul>
+        Following these rules, let's correct the expression
+        \[a+3\times a + b\]
+        First, remove the multiplication symbol, so it becomes:<br>
+        \[a+3a+b\]<br>
+        Combine like terms, and it becomes:<br>
+        \[4a+b\]
+        This cannot be simplified further, so the answer is:<br>
+        \[4a+b\] (units).
+        Also, let's represent a common quadratic equation in algebraic form:<br>
+        \[x\times x-3\times x+10\]
+        First, combine the same products into exponents.
+        \[x^2-3\times x+10\]
+        Next, remove the multiplication symbol and bring the numbers forward:<br>
+        \[x^2-3x+10\]
+        Now, the algebraic expression is organized! It's more concise than writing the multiplication symbol multiple times.
+        <h2>Summary</h2>
+        <ul>
+            <li>Algebraic expressions combine letters and numbers.</li>
+            <li>There are specific 'rules' to follow when writing algebraic expressions.</li>
+            <li>Using algebraic expressions allows us to include unknown numbers in equations.</li>
+        </ul>
+        That's it. Well done!
+    </body>
+</html>
+

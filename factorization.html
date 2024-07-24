@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>因数分解とは/What's factorization?</title>
+        <link rel="stylesheet" href="style.css">
+        <meta charset="utf-8">
+        <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async defer></script>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes" />
+    </head>
+    <body>
+        
+        <img src="images/Title.png" alt="Swap Factor!" class="title-image">
+        日本語/Japanese
+        <h1>因数分解とは</h1>
+        <p>因数分解とは、<b>1つの足し算や引き算が混ざっている式</b>を、<br>カッコでまとめてしまうことです。</p>
+        \[3x^3+9x^2-6x\]
+        <p>この式、とても足し算や引算があって、めんどくさいですよね。</p>
+        <p>それでは、この式を因数分解してみましょう。</p>
+        <h2>因数分解の手順</h2>
+        まずは、<b>共通因数</b>と言われる、<br>
+        この式のすべての項に含まれる因数を探します。<br>
+        この式は、3で割ることができます。なので、まずは3でくくってみましょう。<br>
+        \(3x^3+9x^2-6x=3(x^3+3x^2-2x)\)
+        <p>これで、この式は、3でくくることが出来ました。</p>
+        また、この式は更にxで割ることもできます。なので、こうすることもできます。<br>
+        \(3(x^3+3x^2-2x)=3x(x^2+3x-2)\)
+        <p>これで、この式は、xでくくることもできました。</p>
+        これで、この式は、<b>因数分解が完了</b>しました。<br>
+        こんなことをして何の意味があるのか、という疑問もあるはずですが、<br>
+        このゲームでは、この動作をメインテーマにしています。<br>
+
+        <h2>因数分解の公式</h2>
+        次に、この式を因数分解してみましょう。<br>
+        \[x^2+3x-10\]<br>
+        一見、どこにも共通因数がないので、この式はそのままです。<br>
+        ...と言いたいじゃないですか。<br>
+        実は、因数分解って、ただただ共通因数をくくりだすだけじゃダメなんです。<br>
+        こんな公式があります。
+        <ul>
+            <li>\(x^2+(a+b)x+ab=(x+a)(x+b)\)</li>
+            <li>\(x^2-(a+b)x+ab=(x-a)(x-b)\)</li>
+            <li>\(a^2+2ab+b^2=(a+b)^2\)</li>
+            <li>\(a^2-2ab+b^2=(a-b)^2\)</li>
+        </ul>
+        ...何か急に難しくなってきましたね。でも安心してください。<br>
+        用は、こういうことをすればよいだけです。
+        ...
+        まず、この式 \(x^2+3x-10\) において、画像のような所を見ます。<br>
+        <img src="images/factorization1.png" alt="因数分解の公式"><br>
+        このとき、足して<span style="color: green;">緑色</span>、掛けて<span style="color: red;">赤色</span>になるような数を二つ、見つけ出します。<br>
+        そのような数は、ここでは<b style="color: rgb(129, 191, 129);">-2</b>と<b style="color: rgb(232, 185, 185);">5</b>です。<br>
+        この二つの数が分かったら、この式を因数分解できます。<br>
+        \[x^2+3x-10=(x-2)(x+5)\]
+        上の式で、先ほど出した数がここで出てきましたね。<br>
+         これで、この式は、因数分解が完了しました。<br>
+        <h1>素因数分解とは</h1>
+        <p>このゲームをマスターするためには、因数分解のほかに素因数分解が必要です。</p>
+        <h2>素数とは</h2>
+        素数とは、「<b>1と自分自身以外でしか割れない数(1を除く)</b>」数のことです。
+        例えば、<br>
+        \[2,3,5,7,11,13,17,21,23,29\]
+        こんな感じで、1と自分自身でしか割れない数が素数です。<br>
+        <h2>素因数分解とは</h2>
+        素因数分解とは、ある自然数を、素数だけの掛け算に直すことです。<br>
+        例えば、300を素数だけの掛け算に直すにはどうすればよいでしょうか。<br>
+        答えは、<b>どんどん素数で割っていく</b>ことです。
+        この手順に従って、解いてみましょう。
+        <div class="code">
+            <ul>
+                <li>まず、一番小さい素数2で割ってみる。</li>
+                <li>それで割れなかったら、次に小さい素数で割ってみる。</li>
+                <li>割り切れたら、またその数で割ってみる。</li>
+                <li>これ以上割り切れなくなるまで繰り返す。</li>
+                <li>同じ素因数を指数でまとめる</li>
+            </ul>
+        </div>
+        これで300を素因数分解すると...
+        <div class="code">
+            <ul>
+                <li>\(300\)は素数\(2\)で割り切れる。なので、\(300=150\times2\)。</li>
+                <li>\(150\)は素数\(2\)で割り切れる。なので、\(300=75\times2\times2\)。</li>
+                <li>\(75\)は素数\(3\)で割り切れる。なので、\(300=25\times2\times2\times3\)。</li>
+                <li>\(25\)は素数\(5\)で割り切れる。なので、\(300=2\times2\times3\times5\times5\)</li>
+                <li>これ以上素因数分解できないので、\(300=2\times2\times3\times5\times5\)の同じ積を指数でまとめる。</li>
+            </ul>
+        </div>
+        このとおりにすると、300は
+        \[2^2\times3\times5^2\]
+        と素因数分解できます。
+        
+        <h2>まとめ</h2>
+        単純な事です。因数分解とは
+        <ul>
+            <li>たくさんの足し算や引き算が混じっている式を、カッコでまとめてしまうこと。</li>
+            <li>特に、「共通因数」と呼ばれる、全ての項に含まれる数を見つけて、カッコでくくる。</li>
+            <li>共通因数がない時は、公式でくくると良い。</li>
+            <li>ある自然数を素数の掛け算に直すことを素因数分解という。</li>
+            <li>素数とは、1を除く、1と自分自身でしか割れない自然数のこと。</li>
+        </ul>
+        これで終わりです！やったね！<br>
+        <img src="images/Title.png" alt="Swap Factor!" class="title-image">
+        英語/English
+        <h1>What is Factorization?</h1>
+        <p>Factorization is the process of <b>encapsulating an expression that involves addition or subtraction</b> within parentheses.</p>
+        \[3x^3+9x^2-6x\]
+        <p>This expression is quite cumbersome with all its additions and subtractions, isn't it?</p>
+        <p>Now, let's try to factorize this expression.</p>
+        <h2>Steps of Factorization</h2>
+        First, we look for a <b>common factor</b>,<br>
+        which is a factor included in all terms of the expression.<br>
+        This expression can be divided by 3. So, let's first factor out 3.<br>
+        \(3x^3+9x^2-6x=3(x^3+3x^2-2x)\)
+        <p>With this, we have factored out 3 from the expression.</p>
+        Furthermore, this expression can also be divided by x. So, we can do this as well:<br>
+        \(3(x^3+3x^2-2x)=3x(x^2+3x-2)\)
+        <p>With this, we have also factored out x from the expression.</p>
+        Now, the factorization of this expression is <b>complete</b>.<br>
+        You might wonder what the point of doing this is,<br>
+        but in this game, this operation is the main theme.<br>
+
+        <h2>Factorization Formulas</h2>
+        Next, let's try to factorize this expression:<br>
+        \[x^2+3x-10\]<br>
+        At first glance, there are no common factors, so this expression remains as is.<br>
+        ...or so you would think.<br>
+        Actually, factorization isn't just about pulling out common factors.<br>
+        There are formulas like these:
+        <ul>
+            <li>\(x^2+(a+b)x+ab=(x+a)(x+b)\)</li>
+            <li>\(x^2-(a+b)x+ab=(x-a)(x-b)\)</li>
+            <li>\(a^2+2ab+b^2=(a+b)^2\)</li>
+            <li>\(a^2-2ab+b^2=(a-b)^2\)</li>
+        </ul>
+        ...things suddenly got a bit more complicated. But don't worry.<br>
+        Basically, this is all you need to do.
+        ...
+            First, for this expression \(x^2+3x-10\), look at the image below.<br>
+            <img src="images/factorization1.png" alt="Factorization Formula"><br>
+            At this point, find two numbers that add up to <span style="color: green;">green</span> and multiply to <span style="color: red;">red</span>.<br>
+            In this case, the numbers are <b style="color: rgb(129, 191, 129);">-2</b> and <b style="color: rgb(232, 185, 185);">5</b>.<br>
+            Once you know these two numbers, you can factorize the expression.<br>
+            \[x^2+3x-10=(x-2)(x+5)\]
+            The numbers we found earlier appear here in the final expression.<br>
+            With this, the factorization of this expression is complete.<br>
+
+            <h2>What is Prime Factorization?</h2>
+            Prime factorization is the process of converting a natural number into a product of only prime numbers.<br>
+            For example, how would you convert 300 into a product of only prime numbers?<br>
+            The answer is to <b>continuously divide by prime numbers</b>.
+            Let's follow this procedure and solve it.
+            <div class="code">
+                <ul>
+                    <li>First, divide by the smallest prime number, 2.</li>
+                    <li>If it doesn't divide, then try the next smallest prime number.</li>
+                    <li>If it divides, divide by that number again.</li>
+                    <li>Repeat this until no more divisions are possible.</li>
+                    <li>Group the same prime factors using exponents.</li>
+                </ul>
+            </div>
+            Following these steps to factorize 300...
+            <div class="code">
+                <ul>
+                    <li>\(300\) is divisible by the prime number \(2\), so \(300 = 150 \times 2\).</li>
+                    <li>\(150\) is divisible by the prime number \(2\), so \(300 = 75 \times 2 \times 2\).</li>
+                    <li>\(75\) is divisible by the prime number \(3\), so \(300 = 25 \times 2 \times 2 \times 3\).</li>
+                    <li>\(25\) is divisible by the prime number \(5\), so \(300 = 2 \times 2 \times 3 \times 5 \times 5\)</li>
+                    <li>Since \(5\) cannot be further factorized, group the same factors using exponents: \(300 = 2^2 \times 3 \times 5^2\).</li>
+                </ul>
+            </div>
+            Following this method, 300 can be factorized as:
+            \[2^2 \times 3 \times 5^2\]
+        <h2>Summary</h2>
+        It's simple. Factorization is:
+        <ul>
+            <li>Encapsulating an expression that involves lots of additions and subtractions within parentheses.</li>
+            <li>Especially by finding a 'common factor' that is included in all terms and encapsulating it.</li>
+            <li>If there is no common factor, using a formula to encapsulate is a good approach.</li>
+            <li>The reworking of a natural number into a prime number multiplier is called prime factorization.</li>
+            <li>A prime number is a natural number that is divisible only by 1 and itself, excluding 1.</li>
+        </ul>
+        That's it! Well done!
+    </body>
+</html>
+
