@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Game Leaderboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+        }
+        #leaderboard {
+            margin-top: 20px;
+        }
+        .player {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            background-color: #fff;
+            margin-bottom: 5px;
+        }
+        .player:nth-child(even) {
+            background-color: #e9e9e9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Swap Factor - My Game Leaderboard</h1>
+    <div id="leaderboard"></div>
+    <div id="error" style="color: red;"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./PlayFabSdk/src/PlayFab/PlayFabClientApi.js"></script>
+    <script>
+        $(document).ready(function() {
+            const titleId = 'YOUR_TITLE_ID'; // Swap FactorのMy GameのタイトルIDをここに設定してください
+            PlayFab.settings.titleId = titleId;
+
+            function login() {
+                PlayFabClient.LoginWithCustomID({
+                    TitleId: titleId,
+                    CustomId: 'GettingStartedGuide',
+                    CreateAccount: true
+                }, function (result, error) {
+                    if (error) {
+                        console.error("Error logging in:", error);
+                        $('#error').text('Error logging in: ' + JSON.stringify(error));
+                    } else {
+                        console.log("Logged in:", result);
+                        getLeaderboard();
+                    }
+                });
+            }
+
+            function getLeaderboard() {
+                PlayFabClient.GetLeaderboard({
+                    StatisticName: 'MainGameRanking',
+                    StartPosition: 0,
+                    MaxResultsCount: 10
+                }, function (result, error) {
+                    if (error) {
+                        console.error("Error getting leaderboard:", error);
+                        $('#error').text('Error getting leaderboard: ' + JSON.stringify(error));
+                    } else {
+                        console.log("Leaderboard:", result.data.Leaderboard);
+                        displayLeaderboard(result.data.Leaderboard);
+                    }
+                });
+            }
+
+            function displayLeaderboard(leaderboard) {
+                const leaderboardDiv = $('#leaderboard');
+                leaderboardDiv.empty();
+                leaderboard.forEach(player => {
+                    leaderboardDiv.append(`
+                        <div class="player">
+                            <strong>Position:</strong> ${player.Position}, 
+                            <strong>PlayFabId:</strong> ${player.PlayFabId}, 
+                            <strong>StatValue:</strong> ${player.StatValue}
+                        </div>
+                    `);
+                });
+            }
+
+            login();
+        });
+    </script>
+</body>
+</html>
