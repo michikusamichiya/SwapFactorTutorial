@@ -50,3 +50,28 @@ ul > li {
 img, video {
     width: 40%;
 }
+
+table {
+    margin: 0 auto;
+}
+thead > tr {
+    background-color: #414141;
+}
+tbody > tr:nth-child(2n) {
+    background-color: #666666;
+}
+tbody > tr:nth-child(2n+1) {
+    background-color: rgb(149, 149, 149);
+}
+td {
+    padding: 10px 20px;
+}
+#leaderboard-body > tr:nth-child(1) {
+    color: gold;
+}
+#leaderboard-body > tr:nth-child(2) {
+    color: silver;
+}
+#leaderboard-body > tr:nth-child(3) {
+    color: rgb(215, 72, 0);
+}
